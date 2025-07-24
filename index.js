@@ -17,7 +17,7 @@ app.use(express.json()); // 解析JSON请求体
 
 //connect to database
 const pool = new Pool({
-    connectionString: process.env.DATABASE_URL || 'postgresql://dandan:zky68T3IFGlJk34O6yU4Ts911oRhU5um@dpg-d1vsqg7diees73c0q570-a.oregon-postgres.render.com/firstdb_p58o?sslmode=require',
+    connectionString: process.env.DATABASE_URL,
     ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: false } : false
 })
 
